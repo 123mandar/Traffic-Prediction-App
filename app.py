@@ -11,7 +11,7 @@ model = joblib.load('traffic_model.pkl')
 def home():
     return render_template('index.html')
 
-@app.route('/Traffic-Prediction-App/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     hour = int(request.form['hour'])
     day_of_week = int(request.form['day_of_week'])

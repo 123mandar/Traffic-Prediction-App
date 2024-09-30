@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic Prediction</title>
 </head>
-<body>
-    <h1>Traffic Prediction</h1>
-    <form id="predictForm">
-        <label for="hour">Hour:</label>
-        <input type="number" id="hour" name="hour" required>
-        <br>
-        <label for="day_of_week">Day of Week:</label>
-        <input type="number" id="day_of_week" name="day_of_week" required>
-        <br>
-        <label for="junction">Junction:</label>
-        <input type="number" id="junction" name="junction" required>
-        <br>
-        <button type="submit">Predict</button>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <h1 style="color: #333; text-align: center;">Traffic Prediction</h1>
+    
+    <form id="predictForm" style="max-width: 400px; margin: 0 auto; padding: 20px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <label for="hour" style="font-weight: bold; display: block; margin-bottom: 5px;">Hour:</label>
+        <input type="number" id="hour" name="hour" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #cccccc; border-radius: 4px;">
+        
+        <label for="day_of_week" style="font-weight: bold; display: block; margin-bottom: 5px;">Day of Week:</label>
+        <input type="number" id="day_of_week" name="day_of_week" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #cccccc; border-radius: 4px;">
+        
+        <label for="junction" style="font-weight: bold; display: block; margin-bottom: 5px;">Junction:</label>
+        <input type="number" id="junction" name="junction" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #cccccc; border-radius: 4px;">
+        
+        <button type="submit" style="width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Predict</button>
     </form>
-    <div id="result"></div>
+    
+    <div id="result" style="text-align: center; margin-top: 20px; font-size: 18px; color: #333;"></div>
 
     <script>
         document.getElementById('predictForm').onsubmit = async function(event) {

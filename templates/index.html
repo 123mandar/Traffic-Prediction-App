@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Traffic Predictor</title>
+  </head>
+  <body
+    style="
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    "
+  >
+    <h1 style="color: #333333; text-align: center">Traffic Predictor</h1>
+
+    <form
+      action="/predict"
+      method="post"
+      style="
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      "
+    >
+      <label
+        for="hour"
+        style="font-weight: bold; display: block; margin-bottom: 5px"
+        >Hour of Day (1-24):</label
+      >
+      <input
+        type="number"
+        id="hour"
+        name="hour"
+        min="0"
+        max="23"
+        required
+        style="
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 15px;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+        "
+      />
+
+      <label
+        for="day_of_week"
+        style="font-weight: bold; display: block; margin-bottom: 5px"
+        >Day of the Week (0=Monday, 6=Sunday):</label
+      >
+      <input
+        type="number"
+        id="day_of_week"
+        name="day_of_week"
+        min="0"
+        max="6"
+        required
+        style="
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 15px;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+        "
+      />
+
+      <label
+        for="junction"
+        style="font-weight: bold; display: block; margin-bottom: 5px"
+        >Junction (0-4):</label
+      >
+      <input
+        type="number"
+        id="junction"
+        name="junction"
+        required
+        style="
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 15px;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+        "
+      />
+
+      <input
+        type="submit"
+        value="Predict Traffic"
+        style="
+          width: 100%;
+          padding: 10px;
+          background-color: #28a745;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+        "
+      />
+    </form>
+  </body>
+</html>
